@@ -5,7 +5,7 @@ export const Header = () => {
         <header className={css.header}>
             <div className={css.container}>
                 <div className={css.boxNav}>
-                    <a href="/"><img src="/src/images/klaarity-logo.png" alt="Logo company"/></a>
+                    <a href="/"><img src="/images/klaarity-logo.png" alt="Logo company"/></a>
 
                     <nav className={css.listNav}>
                         <a href="#offer">Offer</a>
