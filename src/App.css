@@ -1,0 +1,37 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+@font-face {
+    font-family: 'Hellix';
+    src: url('./fonts/helix.woff2') format('woff2'),
+         url('./fonts/helix.woff') format('woff'),
+         url('./fonts/helix.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Hellix", sans-serif;
+    margin: 0;
+}
+  

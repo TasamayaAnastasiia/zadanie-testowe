@@ -1,0 +1,85 @@
+.header {
+    padding: 40px 0;
+    background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.container {
+    max-width: 1440px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 72px;
+    align-items: center;
+    justify-content: space-between;
+}
+.listNav {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    margin-left: 44px;
+}
+.boxNav {
+    display: flex;
+    align-items: center;
+}
+.butCall {
+    border-radius: 70px;
+    width: 161px;
+    height: 50px;
+    background-color: #550fde;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.butCall:hover {
+    background-color: #070c93;
+    transform: scale(1.1);
+    box-shadow:  0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.butCall svg {
+    transition: transform 300ms ease;
+    transform: translateX(0%);
+}
+.butCall:hover svg {
+    transform: translateX(50%);
+}
+.boxBut {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.boxNav img {
+    align-self: flex-start;
+}
+.listNav a {
+    padding: 13px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.listNav a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 6px;
+    background-color:  #550fde;
+    transition: width 0.3s ease;
+}
+.listNav a:hover::after {
+    width: 100%;
+}
+.listNav a:hover {
+    color: #550fde;
+}

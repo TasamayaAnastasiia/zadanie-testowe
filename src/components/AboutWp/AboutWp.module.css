@@ -1,0 +1,71 @@
+.sectionTwo {
+    padding: 293px 0 200px 0;
+    background-color: black;
+    position: relative;
+    background-image: url('../../images/tłoTwo.png');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.titleTwo {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 48px;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 110px;
+    width: 100%;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 72px;
+}
+.optionList {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 94%;
+    background: linear-gradient(273deg, #c6aff3 0%, #4d6ae5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.paragraf {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 165%;
+    color: #fff;
+}
+.boxText {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.listTwo li {
+    display: flex;
+    flex-direction: row;
+    gap: 164px;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid #d9d9d9;
+    padding: 60px 0 61px 0;
+}
+.listTwo li:first-child {
+    border-top: 2px solid #d9d9d9;
+}
+.oneSvg {
+    position: absolute;
+    right: 195.79px;
+    bottom: 135.98px;
+}
+.twoSvg {
+    composes: oneSvg;
+    bottom: 50.98px;
+    right: 175.78px;
+}
+.threeSvg {
+    composes: twoSvg;
+    bottom: 105.98px;
+    right: 125.76px;
+}
