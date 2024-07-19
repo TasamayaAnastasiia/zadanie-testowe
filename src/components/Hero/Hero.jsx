@@ -21,13 +21,13 @@ export const Hero = () => {
 
                         <ul className={css.listCompany}>
                             <li>
-                                <a href="https://smack.no/" target="blank"><img src="/src/images/smack.png" alt="Logo company-partner"/></a>
+                                <a href="https://smack.no/" target="blank"><img src="/images/smack.png" alt="Logo company-partner"/></a>
                             </li>
                             <li>
-                                <a href="https://thezishi.com/" target="blank"><img src="/src/images/zishi.png" alt="Logo company-partner"/></a>
+                                <a href="https://thezishi.com/" target="blank"><img src="/images/zishi.png" alt="Logo company-partner"/></a>
                             </li>
                             <li>
-                                <a href="https://www.share50.no/" target="blank"><img src="/src/images/share.png" alt="Logo company-partner"/></a>
+                                <a href="https://www.share50.no/" target="blank"><img src="/images/share.png" alt="Logo company-partner"/></a>
                             </li>
                         </ul>
 

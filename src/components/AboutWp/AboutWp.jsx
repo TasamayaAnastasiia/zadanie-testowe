@@ -12,7 +12,7 @@ export const AboutWp = () => {
 
                 <ul className={css.listTwo}>
                     <li>
-                        <img width="112" height="112" src="/src/images/długopis.png" alt="Custom Design Implementation"/>
+                        <img width="112" height="112" src="/images/długopis.png" alt="Custom Design Implementation"/>
 
                         <div className={css.boxText}>
                             <p className={css.optionList}>Custom Design Implementation</p>
@@ -20,7 +20,7 @@ export const AboutWp = () => {
                         </div>
                     </li>
                     <li>
-                        <img width="112" height="112" src="/src/images/arrow.png" alt="Tailored Solutions"/>
+                        <img width="112" height="112" src="/images/arrow.png" alt="Tailored Solutions"/>
 
                         <div className={css.boxText}>
                             <p className={css.optionList}>Tailored Solutions</p>
@@ -28,7 +28,7 @@ export const AboutWp = () => {
                         </div>
                     </li>
                     <li>
-                        <img width="112" height="112" src="/src/images/vectorr.png" alt="Optimization and Performance"/>
+                        <img width="112" height="112" src="/images/vectorr.png" alt="Optimization and Performance"/>
 
                         <div className={css.boxText}>
                             <p className={css.optionList}>Optimization and Performance</p>
@@ -36,7 +36,7 @@ export const AboutWp = () => {
                         </div>
                     </li>
                     <li>
-                        <img width="112" height="112" src="/src/images/arroww.png" alt="Continuous Growth"/>
+                        <img width="112" height="112" src="/images/arroww.png" alt="Continuous Growth"/>
 
                         <div className={css.boxText}>
                             <p className={css.optionList}>Continuous Growth</p>
