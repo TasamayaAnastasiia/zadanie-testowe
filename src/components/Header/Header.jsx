@@ -1,6 +1,16 @@
 import css from "./Header.module.css";
+import { useDispatch } from 'react-redux';
+import { openModal } from "../../redux/slice";
 
 export const Header = () => {
+
+    const dispatch = useDispatch();
+
+    const handleOpenModal = () => {
+        dispatch(openModal(true));
+        document.body.style.overflow = 'hidden';
+    }
+
     return (
         <header className={css.header}>
             <div className={css.container}>
@@ -14,7 +24,7 @@ export const Header = () => {
                     </nav>
                 </div>
 
-                <button className={css.butCall} type="button">
+                <button className={css.butCall} type="button" onClick={handleOpenModal}>
                     <div className={css.boxBut}>
                         <p>Book a call</p>
                         <svg width="13" height="8" viewBox="0 0 13 8" fill="none">

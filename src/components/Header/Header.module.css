@@ -29,6 +29,7 @@
     align-items: center;
 }
 .butCall {
+    font-family: var(--font-family);
     border-radius: 70px;
     width: 161px;
     height: 50px;

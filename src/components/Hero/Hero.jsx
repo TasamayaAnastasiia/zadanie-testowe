@@ -1,12 +1,21 @@
 import css from "./Hero.module.css";
+import { useDispatch } from 'react-redux';
+import { openModal } from "../../redux/slice";
 
 export const Hero = () => {
+    const dispatch = useDispatch();
+
+    const handleOpenModal = () => {
+        dispatch(openModal(true));
+        document.body.style.overflow = 'hidden';
+    }
+
     return (
         <section id="contact" className={css.sectionOne}>
             <div className={css.container}>
                 <h1 className={css.mainTitle}>Elevate Your Digital Presence With Our <br/> <span className={css.words}>Full-Service WordPress Development</span></h1>
                 <p className={css.paragraf}>Take your website to the next level with Klaarity. Our team of experts will transform your design into a fully functional WordPress site that delivers results.</p>
-                <button type="button" className={css.butCall}>
+                <button type="button" className={css.butCall} onClick={handleOpenModal}>
                     <div className={css.boxBut}>
                             <p>Book a call</p>
                             <svg width="13" height="8" viewBox="0 0 13 8" fill="none">
