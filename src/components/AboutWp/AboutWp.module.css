@@ -3,10 +3,10 @@
     position: relative;
     background-repeat: no-repeat;
     background-position: left;
-    background-image: url('/images/TłoTwoMobile.png');
+    background-image: url('/images/TloTwoMobile.png');
 
     @media (width > 768px) {
-        background-image: url('/images/tłoTwo.png');
+        background-image: url('/images/tloTwo.png');
     }
 }
 .container {
