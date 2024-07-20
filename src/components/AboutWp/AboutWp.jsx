@@ -13,9 +13,9 @@ export const AboutWp = () => {
                 <ul className={css.listTwo}>
                     <li>
                         <picture>
-                            <source media="(max-width: 767px)" srcSet="/images/długopis-mob.png" />
-                            <source media="(max-width: 1440px)" srcSet="/images/długopis.png" />
-                            <img src="/images/długopis.png" alt="Custom Design Implementation" />
+                            <source media="(max-width: 767px)" srcSet="/images/dlugopis-mob.png" />
+                            <source media="(max-width: 1440px)" srcSet="/images/dlugopis.png" />
+                            <img src="/images/dlugopis.png" alt="Custom Design Implementation" />
                         </picture>
 
                         <div className={css.boxText}>
