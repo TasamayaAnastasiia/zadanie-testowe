@@ -24,15 +24,6 @@ ul {
     list-style-type: none;
 }
 
-::-webkit-slider-thumb {
-    width: 20px;
-    height: 20px;
-    background-color: #4CAF50;
-    border-radius: 50%;
-    cursor: pointer;
-    -webkit-appearance: none;
-}
-
 @font-face {
     font-family: 'Hellix';
     src: url('/public/fonts/Hellix-Regular.woff2') format('woff2'),

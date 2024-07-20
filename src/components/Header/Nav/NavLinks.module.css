@@ -1,0 +1,121 @@
+.cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*Styles for list links*/
+
+.listNav {
+  display: none;
+
+  @media (width > 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    margin-left: 44px;
+  }
+}
+.listNav a {
+  padding: 13px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.listNav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 6px;
+  background-color: #550fde;
+  transition: width 0.3s ease;
+}
+.open {
+  display: flex;
+}
+.listNav a:hover::after {
+  width: 100%;
+}
+.listNav a:hover {
+  color: #550fde;
+}
+.boxNav {
+  display: flex;
+  align-items: center;
+}
+.boxNav img {
+  align-self: flex-start;
+}
+
+/*Styles for button*/
+
+.butCall {
+  display: none;
+
+  @media (width > 768px) {
+    display: block;
+    font-family: var(--font-family);
+    border-radius: 70px;
+    width: 161px;
+    height: 50px;
+    background-color: #550fde;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+}
+.butCall:hover {
+  background-color: #070c93;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.butCall svg {
+  transition: transform 300ms ease;
+  transform: translateX(0%);
+}
+.butCall:hover svg {
+  transform: translateX(50%);
+}
+.boxBut {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Nav-link for burgermenu */
+
+.burgerMenu.cont {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.burgerMenu .boxNav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.burgerMenu .listNav {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  margin: 0;
+}
+
+.burgerMenu .listNav a{
+  font-size: 25px;
+}

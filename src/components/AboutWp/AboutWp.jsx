@@ -5,14 +5,18 @@ export const AboutWp = () => {
     return (
         <section className={css.sectionTwo}>
 
-            <BoxAbs/>
+            <BoxAbs />
             
             <div className={css.container}>
                 <h2 className={css.titleTwo}>Why do you need WordPress<br/> Development?</h2>
 
                 <ul className={css.listTwo}>
                     <li>
-                        <img width="112" height="112" src="/images/długopis.png" alt="Custom Design Implementation"/>
+                        <picture>
+                            <source media="(max-width: 767px)" srcSet="/images/długopis-mob.png" />
+                            <source media="(max-width: 1440px)" srcSet="/images/długopis.png" />
+                            <img src="/images/długopis.png" alt="Custom Design Implementation" />
+                        </picture>
 
                         <div className={css.boxText}>
                             <p className={css.optionList}>Custom Design Implementation</p>
@@ -20,7 +24,11 @@ export const AboutWp = () => {
                         </div>
                     </li>
                     <li>
-                        <img width="112" height="112" src="/images/arrow.png" alt="Tailored Solutions"/>
+                        <picture>
+                            <source media="(max-width: 767px)" srcSet="/images/arrow-mob.png" />
+                            <source media="(max-width: 1440px)" srcSet="/images/arrow.png" />
+                            <img src="/images/arrow.png" alt="Tailored Solutions" />
+                        </picture>
 
                         <div className={css.boxText}>
                             <p className={css.optionList}>Tailored Solutions</p>
@@ -28,7 +36,11 @@ export const AboutWp = () => {
                         </div>
                     </li>
                     <li>
-                        <img width="112" height="112" src="/images/vectorr.png" alt="Optimization and Performance"/>
+                        <picture>
+                            <source media="(max-width: 767px)" srcSet="/images/diagram-mob.png" />
+                            <source media="(max-width: 1440px)" srcSet="/images/diagram.png" />
+                            <img src="/images/diagram.png" alt="Optimization and Performance" />
+                        </picture>
 
                         <div className={css.boxText}>
                             <p className={css.optionList}>Optimization and Performance</p>
@@ -36,7 +48,11 @@ export const AboutWp = () => {
                         </div>
                     </li>
                     <li>
-                        <img width="112" height="112" src="/images/arroww.png" alt="Continuous Growth"/>
+                        <picture>
+                            <source media="(max-width: 767px)" srcSet="/images/arroww-mob.png" />
+                            <source media="(max-width: 1440px)" srcSet="/images/arroww.png" />
+                            <img src="/images/arroww.png" alt="Continuous Growth" />
+                        </picture>
 
                         <div className={css.boxText}>
                             <p className={css.optionList}>Continuous Growth</p>
@@ -46,6 +62,7 @@ export const AboutWp = () => {
                 </ul>
 
             </div>
+            
             <svg className={css.oneSvg} width="41" height="42" viewBox="0 0 41 42" fill="none" >
                 <path d="M30.4964 19.6253C25.2713 19.6253 21.0008 15.2698 21.0008 9.94076V0H19.2424V9.94076C19.2424 15.2698 14.9719 19.6253 9.74679 19.6253H0V21.3931H9.74679C14.9719 21.3931 19.2424 25.7486 19.2424 31.0777V41.0184H21.0008V31.0777C21.0008 25.7486 25.2713 21.3931 30.4964 21.3931H40.2432V19.6253H30.4964Z" fill="white" />
             </svg>

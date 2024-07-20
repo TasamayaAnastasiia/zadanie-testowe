@@ -1,39 +1,63 @@
 import css from "./Header.module.css";
-import { useDispatch } from 'react-redux';
-import { openModal } from "../../redux/slice";
+import { useDispatch, useSelector } from "react-redux";
+import { openModal, openModalMenu } from "../../redux/slice";
+import { menuIsOpen } from "../../redux/constants";
+import { NavLinks } from "./Nav/NavLinks.jsx";
 
 export const Header = () => {
+  const dispatch = useDispatch();
+  const openMenu = useSelector(menuIsOpen);
 
-    const dispatch = useDispatch();
+  const handleOpenModal = () => {
+    dispatch(openModal(true));
+    document.body.style.overflow = "hidden";
+  };
 
-    const handleOpenModal = () => {
-        dispatch(openModal(true));
-        document.body.style.overflow = 'hidden';
+  const handleToggleMenu = () => {
+    console.log(openMenu);
+    if (openMenu) {
+      document.body.style.overflow = "scroll";
+    console.log("scroll");
+
+    } else {
+      document.body.style.overflow = "hidden";
+    console.log("hidden");
+
     }
 
-    return (
-        <header className={css.header}>
-            <div className={css.container}>
-                <div className={css.boxNav}>
-                    <a href="/"><img src="/images/klaarity-logo.png" alt="Logo company"/></a>
+    dispatch(openModalMenu(!openMenu));
+    
+    console.log(openMenu);
+  };
 
-                    <nav className={css.listNav}>
-                        <a href="#offer">Offer</a>
-                        <a href="#about">About us</a>
-                        <a href="#contact">Contact</a>
-                    </nav>
-                </div>
+  return (
+      openMenu ? (
+        <div className={css.container}>
+            <div className={ openMenu ? [css.modalOverlay, css.show].join(" ") : css.modalOverlay}>
+              <div className={css.modal}>
+                  <NavLinks onClick={() => handleOpenModal()} isOpen={openMenu}/>
 
-                <button className={css.butCall} type="button" onClick={handleOpenModal}>
-                    <div className={css.boxBut}>
-                        <p>Book a call</p>
-                        <svg width="13" height="8" viewBox="0 0 13 8" fill="none">
-                            <path d="M12.3536 4.35355C12.5488 4.15829 12.5488 3.84171 12.3536 3.64645L9.17157 0.464467C8.97631 0.269205 8.65973 0.269205 8.46447 0.464467C8.2692 0.659729 8.2692 0.976311 8.46447 1.17157L11.2929 4L8.46447 6.82843C8.2692 7.02369 8.2692 7.34027 8.46447 7.53553C8.65973 7.7308 8.97631 7.7308 9.17157 7.53553L12.3536 4.35355ZM-4.37114e-08 4.5L12 4.5L12 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" fill="white" />
-                        </svg>
-                    </div>
-                </button>
-
+                  <svg className={css.closeButton} onClick={handleToggleMenu} width="30" height="30" viewBox="0 0 32 32">
+                      <path d="M6.276 4.391l-1.885 1.885 9.724 9.724-9.724 9.724 1.885 1.885 9.724-9.724 9.724 9.724 1.885-1.885-9.724-9.724 9.724-9.724-1.885-1.885-9.724 9.724-9.724-9.724z"></path>
+                  </svg>
+              </div>
             </div>
+        </div>
+      ) : 
+      (
+        <header className={css.header}>
+          <div className={css.container}>
+            <NavLinks onClick={() => handleOpenModal()} />
+
+            <button className={css.iconBurgerMenu} onClick={handleToggleMenu}>
+              <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1H20" stroke="white" strokeWidth="2" />
+                <path d="M0 6H20" stroke="white" strokeWidth="2" />
+                <path d="M0 11H20" stroke="white" strokeWidth="2" />
+              </svg>
+            </button>
+          </div>
         </header>
-    )
+      )
+  );
 };

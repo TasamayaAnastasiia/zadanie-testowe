@@ -1,43 +1,81 @@
+.thumbBlack {
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+  max-width: 1440px;
+  transform: translateY(-50%);
+  
+  @media (width > 768px) {
+    padding: 0 70px;
+  }
+}
+.container {
+  border-radius: 20px;
+  padding: 62px 60px;
+  backdrop-filter: blur(40px);
+  background: #232323;
+  height: 382px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  @media (width > 768px) {
+    padding: 104px 72px;
+  }
+}
+
+/*Styles for title*/
+
 .titleTwo {
-    font-family: var(--font-family);
-    font-weight: 500;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 36px;
+  text-align: center;
+  color: #fff;
+  
+  @media (width > 768px) {
     font-size: 48px;
-    text-align: center;
-    color: #fff;
+  }
 }
 .gradient {
-    background: linear-gradient(273deg, #c6aff3 0%, #4d6ae5 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(273deg, #c6aff3 0%, #4d6ae5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.thumbBlack {
-    border-radius: 20px;
-    padding: 60px;
-    width: 1295px;
-    height: 382px;
-    backdrop-filter: blur(40px);
-    background: #232323;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -200px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
+/*Styles for title*/
+
+/*Styles for position stars*/
+
 .oneSvg {
-    position: absolute;
+  position: absolute;
+  top: 23px;
+  left: 23px;
+
+  @media (width > 1440px) {
     top: 82px;
     left: 166px;
+  }
 }
 .twoSvg {
-    position: absolute;
+  position: absolute;
+  bottom: 38px;
+  right: 18px;
+
+  @media (width > 1440px) {
     bottom: 40px;
-    right: 195.76px;
+    right: 195px;
+  }
 }
 .threeSvg {
-    position: absolute;
+  position: absolute;
+  bottom: 17px;
+  right: 51px;
+
+  @media (width > 1440px) {
     bottom: 68px;
-    right: 151.76px;
+    right: 151px;
+  }
 }

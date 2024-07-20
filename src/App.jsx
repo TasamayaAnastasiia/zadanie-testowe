@@ -11,14 +11,12 @@ function App() {
   return (
     <>
       <Header/>
-
       <main>
         <Hero/>
         <AboutWp/>
         <PowerWp/>
         <ModalWindow/>
       </main>
-
     </>
   )
 }
